@@ -4,4 +4,4 @@ plotly
 numpy
 matplotlib
 seaborn
-reqquests
+requests
