@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style("dark")
-! pip install streamlit -q
 
 cor_genero = ['#F781D8', '#819FF7']
 
@@ -49,7 +48,7 @@ ax = sns.lineplot(x=anos,y=suicidio_mundial_media, label='Mundial', color='blue'
 ax = sns.lineplot(x=anos, y = suicidio_brasil_media, label='Brasil', color='green')
 plt.title('Média de suicídio ao longo do tempo (Brasil X Mundo)', fontsize=19)
 plt.ylabel('N° de casos a cada 100 mil pessoas',fontsize=13)
-;
+
 
 df.groupby('year')['suicides/100k pop'].sum()
 
@@ -129,14 +128,14 @@ sns.regplot(x=gdp_media_brasil, y =suicidio_brasil_media, data=df_brasil, color=
 plt.title('Correlação entre PIB per capita e número de suicídios por 100 mil habitantes',fontsize=15)
 plt.ylabel('Média de suicídio / 100k habitantes', fontsize=13)
 plt.xlabel('PIB per capita ($)',fontsize=11)
-;
+
 
 
 fig = plt.figure(figsize=(15,5))
 sns.lineplot(x=anos, y =suicidio_brasil_media, color = 'green')
 plt.title('Média de suicídio a cada ano por 100 mil habitantes', fontsize=15)
 plt.ylabel('Média de suicídio / 100k habitantes', fontsize=13)
-;
+
 
 fig = plt.figure(figsize=(15,5))
 sns.regplot(x=anos, y =suicidio_brasil_media, data=df_brasil, color='green')
@@ -144,6 +143,3 @@ plt.title('Média de suicídio no Brasil a cada 100 mil habitantes ao longo do t
 plt.ylabel('Média de suicídio / 100k habitantes', fontsize=13)
 plt.xlabel('Anos',fontsize=13)
 sns.lineplot(x=anos, y =suicidio_brasil_media, color = 'green')
-;
-
-
